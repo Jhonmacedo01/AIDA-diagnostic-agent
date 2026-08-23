@@ -1,0 +1,14 @@
+cat > render.yaml << 'EOF'
+services:
+  - type: web
+    name: aida-diagnostic-agent
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PORT
+        value: 3000
+EOF

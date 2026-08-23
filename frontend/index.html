@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIDA | Agente Industrial de Diagnostico ABB</title>
+  <meta name="description" content="Decodificacao de diagnosticos ABB 800xA / AC 800M e agente de investigacao assistido por IA para tecnicos de automacao industrial." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:opsz,wght@14..32,400..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" id="faviconLink" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <header class="topbar" role="banner">
+      <div class="topbar-inner">
+        <a class="brand" href="#decode" aria-label="AIDA, pagina inicial">
+          <svg class="brand-logo" viewBox="0 0 220 56" role="img" aria-labelledby="logoTitle">
+            <title id="logoTitle">AIDA — Agente Industrial de Diagnostico ABB</title>
+            <g class="logo-mark">
+              <path class="logo-triangle" d="M28 8 L48 42 H8 Z" fill="none" stroke="var(--accent)" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+              <rect x="26.6" y="18" width="2.8" height="9" rx="1.4" fill="var(--accent)"/>
+              <circle class="logo-beacon" cx="28" cy="32" r="2.6" fill="var(--accent)"/>
+            </g>
+            <text x="62" y="34" class="logo-word" font-family="'Barlow Condensed', 'Oswald', sans-serif" font-weight="700" font-size="26" letter-spacing="1" fill="currentColor">AIDA</text>
+            <text x="62" y="48" class="logo-sub" font-family="'Inter', sans-serif" font-weight="500" font-size="8.5" letter-spacing="1.5" fill="currentColor">DIAGNOSTICO INDUSTRIAL ABB</text>
+          </svg>
+        </a>
+        <nav class="nav-links" role="navigation" aria-label="Navegacao principal">
+          <a href="#decode" class="nav-link active" data-section="decode">Decodificar</a>
+          <a href="#agent" class="nav-link" data-section="agent">Agente</a>
+          <a href="#atlas" class="nav-link" data-section="atlas">Atlas</a>
+        </nav>
+        <div class="topbar-actions">
+          <span class="status-chip" role="status">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">Verificando</span>
+          </span>
+          <button class="icon-btn theme-toggle-btn" id="themeToggle" type="button" aria-label="Alternar tema claro e escuro">
+            <svg id="themeIconMoon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.4A9 9 0 1 1 11.6 3a7 7 0 0 0 9.4 9.4Z"/></svg>
+            <svg id="themeIconSun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+          </button>
+          <button class="text-btn" id="clearAllBtn" type="button">Limpar</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- DECODIFICADOR -->
+      <section id="decode" class="panel-section" aria-labelledby="decode-title">
+        <div class="section-head">
+          <span class="section-eyebrow">Modulo ABB S800</span>
+          <h1 id="decode-title">Decodificador de Diagnostico</h1>
+          <p class="section-desc">Informe o modulo e o codigo hexadecimal de 32 bits para interpretar status, severidade e descricao de cada bit ativo.</p>
+        </div>
+
+        <div class="panel bracket-frame">
+          <div class="decode-input-row">
+            <div class="field">
+              <label class="field-label" for="moduleSelect">Modulo</label>
+              <select id="moduleSelect" class="select"></select>
+            </div>
+            <div class="field">
+              <label class="field-label" for="hexInput">Codigo hexadecimal, 32 bits</label>
+              <div class="hex-wrapper">
+                <span class="hex-prefix">16#</span>
+                <input type="text" id="hexInput" class="hex-input" placeholder="00000000" maxlength="8" value="00000000" spellcheck="false" aria-describedby="helperText" />
+                <button class="paste-btn" id="pasteBtn" type="button" aria-label="Colar da area de transferencia">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="4" width="8" height="4" rx="1"/><path d="M8 6H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2"/></svg>
+                </button>
+              </div>
+              <span class="helper" id="helperText">Exemplo: 16#00000014</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary" id="decodeBtn" type="button">Decodificar</button>
+              <button class="btn ghost" id="clearBtn" type="button">Limpar</button>
+            </div>
+          </div>
+
+          <div class="result-panel" id="resultPanel">
+            <div class="placeholder" id="placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19h16M6 19V9l4-4 4 4v10M14 19v-6h4v6"/></svg>
+              <p>Execute uma decodificacao para ver os resultados.</p>
+            </div>
+            <div class="result-content" id="resultContent" style="display:none;">
+              <div class="result-summary" id="resultSummary"></div>
+              <div class="table-wrapper">
+                <table>
+                  <thead><tr><th>Bit</th><th>Severidade</th><th>Status</th><th>Descricao</th></tr></thead>
+                  <tbody id="resultTableBody"></tbody>
+                </table>
+              </div>
+              <div class="conversion-strip" id="conversionStrip"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AGENTE -->
+      <section id="agent" class="panel-section" aria-labelledby="agent-title">
+        <div class="section-head">
+          <span class="section-eyebrow">Assistente de investigacao</span>
+          <h1 id="agent-title">Agente de Diagnostico</h1>
+          <p class="section-desc">Converse com o AIDA sobre codigos de erro, modulos e planos de investigacao. Use um comando de modo para direcionar a analise.</p>
+        </div>
+
+        <div class="panel bracket-frame chat-panel">
+          <div class="mode-row" id="modeRow" role="group" aria-label="Modos de analise">
+            <button class="mode-chip" type="button" data-mode="EXPERT">/EXPERT</button>
+            <button class="mode-chip" type="button" data-mode="CRITIC">/CRITIC</button>
+            <button class="mode-chip" type="button" data-mode="DEEP">/DEEP</button>
+            <button class="mode-chip" type="button" data-mode="RISK">/RISK</button>
+          </div>
+
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"></div>
+
+          <div class="context-chip" id="contextChip" style="display:none;" role="status">
+            <span class="context-dot"></span>
+            <span id="contextChipText"></span>
+          </div>
+
+          <div class="chat-input-area">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Descreva o modulo, o codigo ou a duvida de diagnostico" autocomplete="off" aria-label="Mensagem para o agente" />
+            <button id="sendBtn" class="btn primary send-btn" type="button" aria-label="Enviar mensagem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ATLAS -->
+      <section id="atlas" class="panel-section" aria-labelledby="atlas-title">
+        <div class="section-head">
+          <span class="section-eyebrow">Base de conhecimento</span>
+          <h1 id="atlas-title">Atlas de Diagnostico</h1>
+          <p class="section-desc">Consulte todos os bits mapeados por familia de modulo S800.</p>
+        </div>
+
+        <div class="atlas-tabs" role="tablist">
+          <button class="tab active" type="button" data-tab="analog" role="tab" aria-selected="true">Analogicos</button>
+          <button class="tab" type="button" data-tab="digital" role="tab" aria-selected="false">Digitais</button>
+          <button class="tab" type="button" data-tab="comms" role="tab" aria-selected="false">Comunicacao</button>
+          <button class="tab" type="button" data-tab="system" role="tab" aria-selected="false">Sistema 800xA</button>
+        </div>
+
+        <div class="atlas-content" id="atlasContent"></div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-copy">2026, AIDA. Agente Industrial de Diagnostico ABB.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Jhonmacedo01" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.2 2.4.1 2.65.65.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/jhon-macedo-6b8aa91b0/?locale=pt" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.47V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.11 20.45H3.56V9h3.55v11.45Z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

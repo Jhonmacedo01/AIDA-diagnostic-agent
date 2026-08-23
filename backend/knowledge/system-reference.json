@@ -1,0 +1,157 @@
+{
+  "arquitetura": {
+    "title": "Arquitetura e Aspect Objects",
+    "items": [
+      {
+        "id": "aspect-objects",
+        "title": "Conceito de Aspect Object",
+        "pt": "No 800xA, cada equipamento ou entidade de processo (uma valvula, um reator, um pedido de fabricacao) e modelado como um Aspect Object. Todas as informacoes relacionadas a esse objeto, como grafico de processo, faceplate, lista de alarmes, tendencia e documentacao, sao chamadas de aspects e ficam acessiveis pelo menu de contexto (botao direito) em qualquer lugar do sistema onde o objeto aparece."
+      },
+      {
+        "id": "aspect-framework",
+        "title": "Aspect Framework (AfW)",
+        "pt": "E a base de software do 800xA: integra todos os produtos do sistema atraves de seus Aspect Objects, independente de em qual computador da rede cada aplicacao reside. Todos os Aspect Objects sao armazenados de forma centralizada no Aspect Server."
+      },
+      {
+        "id": "navegacao",
+        "title": "Navegacao por objeto",
+        "pt": "O acesso a informacao e feito de forma consistente a partir do proprio objeto, sem precisar saber qual aplicacao trata cada dado. O mesmo menu de aspects aparece tanto a partir de um display grafico quanto de uma lista de alarmes, por exemplo."
+      }
+    ]
+  },
+  "topologia": {
+    "title": "Topologia e Servidores",
+    "items": [
+      {
+        "id": "domain-server",
+        "title": "Domain Server",
+        "pt": "Sistemas pequenos podem rodar sem controlador de dominio, usando um Windows Workgroup (usuarios e seguranca configurados individualmente em cada node). Em um dominio Windows, o gerenciamento de usuarios e centralizado no Domain Server; para resiliencia, recomenda-se mais de um servidor de dominio."
+      },
+      {
+        "id": "aspect-server",
+        "title": "Aspect Server",
+        "pt": "E o nucleo do sistema 800xA: fornece o Aspect Directory e os servicos de gestao de objetos, nomes e seguranca, e precisa estar acessivel a todos os nodes o tempo todo. Suporta redundancia 1-de-2 (leitura e escrita com um servidor online) ou 2-de-3 (escrita exige dois servidores online; com apenas um, o Aspect Directory fica somente leitura, valido para operacao mas nao para engenharia)."
+      },
+      {
+        "id": "connectivity-server",
+        "title": "Connectivity Server",
+        "pt": "Fornece o acesso aos controladores e outras fontes de dado na rede (OPC Data Access, OPC Alarm and Event, mensagens de sistema). Um Connectivity Server AC 800M, unico ou redundante, suporta no maximo 48 controladores AC 800M conectados."
+      },
+      {
+        "id": "application-server",
+        "title": "Application Server",
+        "pt": "Executa aplicacoes de sistema como Batch Management, Asset Optimization e Historian."
+      },
+      {
+        "id": "licenciamento",
+        "title": "Licenciamento central",
+        "pt": "O sistema usa um mecanismo central de licenciamento (CLS), normalmente hospedado no Primary Aspect Server; os demais nodes atuam como clientes licenciados."
+      }
+    ]
+  },
+  "redundancia": {
+    "title": "Redundancia e Atualizacao Online",
+    "items": [
+      {
+        "id": "redundancia-geral",
+        "title": "Redundancia opcional no 800xA",
+        "pt": "Podem ser configurados de forma redundante, com chaveamento automatico: E/S, controladores AC 800M, control networks, redes de fieldbus, Connectivity Servers, Aspect Servers e Operator Workplaces."
+      },
+      {
+        "id": "atualizacao-online",
+        "title": "Atualizacao online do sistema (a partir do SV5.0)",
+        "pt": "Com todos os servidores redundantes, e possivel atualizar o sistema em execucao sem parar a producao: desacoplar os nodes redundantes, atualiza-los, formar um sistema paralelo atualizado, migrar os clientes e servidores restantes e so entao reabilitar o modo redundante. A atualizacao de firmware do controlador exige parada programada e nao pode ser feita em sistema rodando."
+      }
+    ]
+  },
+  "hardware": {
+    "title": "Hardware AC 800M",
+    "items": [
+      {
+        "id": "familia-cpu",
+        "title": "Familia de CPUs PM8xx",
+        "pt": "Unidades como PM851, PM856 e PM860 nao suportam redundancia nem troca online. A maioria das CPUs mais recentes (PM857, PM858, PM861A, PM862, PM863, PM864/PM864A, PM865, PM866, PM867) suporta redundancia e Online Replacement. PM862 e PM867 suportam ate 12 modulos no CEX-Bus. PM891 e a CPU de alto desempenho, com design monolitico sem baseplate, sem modulebus eletrico nem COM3, e usa cartao SD em vez de Compact Flash."
+      },
+      {
+        "id": "high-integrity",
+        "title": "Controladores High Integrity",
+        "pt": "PM857, PM863, PM865 e PM867 podem ser usados em sistemas AC 800M High Integrity. Um par redundante PM867 exige sempre um modulo SM812 em execucao, com substituicao online possivel em apenas um modulo de supervisao por vez."
+      },
+      {
+        "id": "cex-bus",
+        "title": "CEX-Bus (Communication Expansion Bus)",
+        "pt": "Barramento de comunicacao embutido na CPU que aceita ate 12 unidades de comunicacao. Precisa ser terminado com TB850 (macho) ou TB851 (femea); um cabo de extensao TK850 (0,7 m, conector DB25P) permite estender o CEX-Bus para um segundo trilho DIN."
+      },
+      {
+        "id": "modos-partida",
+        "title": "Modos de partida do controlador",
+        "pt": "Inicio a quente: liga/desliga com CPU em backup de bateria, aplicacao reinicia com valores retain. Inicio a frio: pressionar Init por menos de 2,5 s, reinicia com valores cold retain. Reset: pressionar Init por mais de 3 s (ou ate o LED de execucao piscar), apaga as aplicacoes do controlador e exige novo download."
+      },
+      {
+        "id": "bateria-backup",
+        "title": "Autonomia de bateria por CPU",
+        "pt": "Tempo minimo de retencao de memoria com bateria interna varia por familia: PM851/PM856/PM860 cerca de 48 horas; PM861/PM864 cerca de 36 horas; PM865, PM866/PM866A, PM858/PM862/PM867 na faixa de 150-235 horas. Baterias externas SB821 (nao recarregavel) e SB822 (recarregavel) estendem esse backup por semanas a meses, variando por modelo de CPU."
+      },
+      {
+        "id": "tipos-io",
+        "title": "Familias de E/S suportadas",
+        "pt": "O AC 800M aceita S800 modular I/O (com variante intrinsecamente segura), S800L (I/O compacta integrada, sem substituicao online), S200 via modulo CI865, S900 via modulo CI920 PROFIBUS (apropriado para areas classificadas) e S100 via modulo CI856."
+      },
+      {
+        "id": "conexao-io",
+        "title": "Conexao dos clusters de E/S",
+        "pt": "As unidades S800 se conectam por ModuleBus (eletrico ou optico) ou por PROFIBUS DP. Um cluster e formado por um modulo CI854A/CI801 (ou modem TB820) mais os modulos de E/S, com no maximo 12 modulos de E/S por cluster."
+      }
+    ]
+  },
+  "diagnostico": {
+    "title": "Diagnostico e Manutencao",
+    "items": [
+      {
+        "id": "system-diagnostics-fb",
+        "title": "Function Block SystemDiagnostics",
+        "pt": "Disponivel na biblioteca Basic, exige uma instancia separada em cada aplicacao. Sua faceplate no Engineering Workplace, em modo online, abre a janela Controller Diagnostics para leitura direta do estado do controlador. O consumo de memoria do relatorio de diagnostico escala com o tamanho do relatorio, entao vale monitorar."
+      },
+      {
+        "id": "ci874-diagnostico",
+        "title": "Diagnostico do CI874 (interface OPC UA)",
+        "pt": "O CI874 e representado na arvore de hardware do Control Builder junto de um objeto CI874Diagnostic proprio, criado automaticamente. O estado operacional e indicado por LED: o LED R (Run) verde aceso indica unidade operacional. Informacoes de erro e status de hardware/software tambem ficam disponiveis via UnitStatus, que pode ser exposto para aplicacoes IEC 61131. O CI874 suporta hot swap sem necessidade de reconfiguracao."
+      }
+    ]
+  },
+  "comunicacao": {
+    "title": "Comunicacao e OPC UA",
+    "items": [
+      {
+        "id": "ci874-visao-geral",
+        "title": "CI874, cliente e servidor OPC UA",
+        "pt": "Como cliente OPC UA, o CI874 suporta ate 50 servidores OPC UA (25 pares redundantes) e ate 10.000 variaveis OPC UA por unidade, mapeadas como canais de E/S ciclicos para o AC 800M. O CI874 Import Wizard cria bibliotecas e tipos de objeto a partir do modelo de informacao do servidor OPC UA de origem, incluindo o suporte a companion specifications."
+      },
+      {
+        "id": "ci874-seguranca",
+        "title": "Seguranca do CI874",
+        "pt": "O CI874 nao mantem portas de escuta abertas como medida de seguranca cibernetica, reduzindo a superficie de ataque na rede de comunicacao."
+      }
+    ]
+  },
+  "backup": {
+    "title": "Backup do Sistema 800xA",
+    "items": [
+      {
+        "id": "backup-geral",
+        "title": "800xA System Backup/Restore",
+        "pt": "Faz backup e restauracao do Aspect Directory (toda a configuracao do sistema), mas nao cobre o Windows nem a instalacao do software 800xA. O backup roda com o sistema em producao; a restauracao exige o sistema parado. Os dados sao gravados em arquivos .afw, que devem ser copiados depois para armazenamento externo seguro."
+      },
+      {
+        "id": "backup-restricoes",
+        "title": "Restricoes do backup completo",
+        "pt": "Nao se deve alterar ou reservar nenhum aspecto ou objeto durante um backup ativo. Evite rodar o backup completo com um ou dois servidores secundarios desligados, e nunca aponte o backup completo para um disco de rede, para nao comprometer o resultado em caso de falha de rede."
+      },
+      {
+        "id": "backup-servico",
+        "title": "Servico de backup e agendamento",
+        "pt": "Antes de qualquer backup, o BackupService precisa estar ativo (Service Structure > Services > BackupService). Backups agendados dependem do Scheduler Service, configurado com um Service Group e um Service Provider apontando para o node do Aspect Server primario."
+      }
+    ]
+  }
+}

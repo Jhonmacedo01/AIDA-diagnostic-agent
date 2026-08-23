@@ -1,0 +1,49 @@
+{
+  "name": "aida-diagnostic-agent",
+  "version": "2.0.0",
+  "description": "AIDA - Agente Industrial de Diagnostico ABB 800xA / AC 800M, com decodificador de codigos hexadecimais e agente de IA com ferramentas (Groq/DeepSeek/OpenAI)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "list-models": "node backend/scripts/list-models.js"
+  },
+  "keywords": [
+    "ABB",
+    "800xA",
+    "AC800M",
+    "S800",
+    "diagnostico",
+    "automacao-industrial",
+    "ia",
+    "agente",
+    "groq",
+    "function-calling"
+  ],
+  "author": {
+    "name": "Jhon Macedo",
+    "email": "jhonmacedo01@gmail.com",
+    "url": "https://www.linkedin.com/in/jhon-macedo-6b8aa91b0/?locale=pt"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jhonmacedo01/abb-diagnostic-agent"
+  },
+  "bugs": {
+    "url": "https://github.com/Jhonmacedo01/abb-diagnostic-agent/issues"
+  },
+  "homepage": "https://github.com/Jhonmacedo01/abb-diagnostic-agent#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "openai": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,1802 @@
+{
+  "GENERAL": {
+    "0": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Connection down",
+      "pt": "Conexão perdida"
+    },
+    "1": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "I/O error",
+      "pt": "Erro de I/O"
+    },
+    "2": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Module missing",
+      "pt": "Módulo ausente"
+    },
+    "3": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Wrong module type",
+      "pt": "Tipo de módulo incorreto"
+    },
+    "4": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Channel error",
+      "pt": "Erro no canal"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "I/O warning",
+      "pt": "Alerta de I/O"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Underflow",
+      "pt": "Subfluxo"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Overflow",
+      "pt": "Sobreflexo"
+    },
+    "8": {
+      "status": "Event",
+      "severity": "Low",
+      "desc": "Forced",
+      "pt": "Forçado"
+    },
+    "9": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Watchdog timeout",
+      "pt": "Time-out do Watchdog"
+    },
+    "10": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Device failure",
+      "pt": "Falha no dispositivo"
+    },
+    "11": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Device not found",
+      "pt": "Dispositivo não encontrado"
+    },
+    "12": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Wrong device type",
+      "pt": "Tipo de dispositivo incorreto"
+    },
+    "13": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "I/O connection error",
+      "pt": "Erro de conexão I/O"
+    },
+    "14": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "I/O configuration error",
+      "pt": "Erro de configuração I/O"
+    },
+    "15": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Hardware configuration error",
+      "pt": "Erro de configuração de hardware"
+    },
+    "16": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "General error, accumulated status",
+      "pt": "Erro geral, status acumulado"
+    },
+    "17": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "General warning, accumulated status",
+      "pt": "Alerta geral, status acumulado"
+    },
+    "18": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning on primary unit",
+      "pt": "Alerta na unidade primária"
+    },
+    "19": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning on backup unit",
+      "pt": "Alerta na unidade de reserva"
+    },
+    "20": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Error on backup unit",
+      "pt": "Erro na unidade de reserva"
+    },
+    "21": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Waiting for hardware initialization",
+      "pt": "Aguardando inicialização do hardware"
+    }
+  },
+  "EXTENDED": {
+    "22": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "eA",
+      "pt": "eA"
+    },
+    "23": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Version of Running Primary is incompatible",
+      "pt": "Versão do Primário incompatível"
+    },
+    "24": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Version of Running Backup is incompatible",
+      "pt": "Versão do Reserva incompatível"
+    },
+    "25": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Version of Running Primary is not preferred",
+      "pt": "Versão do Primário não preferida"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Version of Running Backup is not preferred",
+      "pt": "Versão do Reserva não preferida"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Watchdog timeout on backup",
+      "pt": "Time-out do Watchdog no Reserva"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Backup device failure",
+      "pt": "Falha no dispositivo de reserva"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Switchover in progress",
+      "pt": "Chaveamento em andamento"
+    },
+    "30": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Redundant mode enabled",
+      "pt": "Modo redundante ativado"
+    },
+    "31": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Unit B acts primary",
+      "pt": "Unidade B atuando como primária"
+    }
+  },
+  "AI810": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure - Not configured",
+      "pt": "Falha - Não configurado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "AI820": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure - Not configured",
+      "pt": "Falha - Não configurado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "AI845": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Internal channel error",
+      "pt": "Erro interno de canal"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "AO810": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure - Not configured",
+      "pt": "Falha - Não configurado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "AO820": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "OSP - Output State Programmed",
+      "pt": "OSP - Estado de Saída Programado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "DI810": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure - Not configured",
+      "pt": "Falha - Não configurado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "DI820": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "DO810": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "OSP - Output State Programmed",
+      "pt": "OSP - Estado de Saída Programado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not configured",
+      "pt": "Não configurado"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "DO820": {
+    "0": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "OSP - Output State Programmed",
+      "pt": "OSP - Estado de Saída Programado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "2": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "4": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "6": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "8": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Failure",
+      "pt": "Falha"
+    },
+    "10": {
+      "status": "Info",
+      "severity": "Low",
+      "desc": "Not required",
+      "pt": "Não requer ação"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Maintenance required",
+      "pt": "Manutenção necessária"
+    },
+    "30": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Warning (module-level, see channel bits)",
+      "pt": "Aviso (nível do módulo, ver bits de canal)"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Error (module-level, see channel bits)",
+      "pt": "Erro (nível do módulo, ver bits de canal)"
+    }
+  },
+  "CI801": {
+    "0": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Slave does not exist",
+      "pt": "Escravo não existe"
+    },
+    "1": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Configuration data fault",
+      "pt": "Falha nos dados de configuração"
+    },
+    "2": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Parameter data fault",
+      "pt": "Falha nos dados de parâmetros"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Static diagnostic",
+      "pt": "Diagnóstico estático"
+    },
+    "4": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Redundant slave does not exist",
+      "pt": "Escravo redundante não existe"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Diagnostic configuration data fault",
+      "pt": "Falha nos dados de diagnóstico"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Report diagnostics fault",
+      "pt": "Falha ao reportar diagnóstico"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Station address warning",
+      "pt": "Alerta de endereço da estação"
+    },
+    "25": {
+      "status": "Warning",
+      "severity": "High",
+      "desc": "Station warning",
+      "pt": "Alerta da estação"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Power B error",
+      "pt": "Erro na alimentação B"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Power A error",
+      "pt": "Erro na alimentação A"
+    }
+  },
+  "CI854": {
+    "0": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Timeout on bus, duplicate slave address (TTO)",
+      "pt": "Time-out no barramento, endereço duplicado"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Bus synchronization failure (SYN)",
+      "pt": "Falha na sincronização do barramento"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Taken out of ring by another master",
+      "pt": "Removido do anel por outro mestre"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Fatal medium access error",
+      "pt": "Erro fatal de acesso ao meio"
+    },
+    "4": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Fatal hardware error",
+      "pt": "Erro fatal de hardware"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "All slaves failed",
+      "pt": "Todos os escravos falharam"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Hardware config error on backup",
+      "pt": "Erro de config. hardware no Reserva"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Backup device not found",
+      "pt": "Dispositivo de reserva não encontrado"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "I/O config error on backup",
+      "pt": "Erro de config. I/O no Reserva"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "I/O connection error on backup",
+      "pt": "Erro de conexão I/O no Reserva"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Hardware watchdog on Backup expired",
+      "pt": "Watchdog do Reserva expirou"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Error in PROFIBUS master config on Backup",
+      "pt": "Erro na config. mestre PROFIBUS no Reserva"
+    },
+    "12": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on PROFIBUS line A of Backup",
+      "pt": "Sem atividade na linha A do Reserva"
+    },
+    "13": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on PROFIBUS line B of Backup",
+      "pt": "Sem atividade na linha B do Reserva"
+    },
+    "14": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Hardware failure Backup",
+      "pt": "Falha de hardware no Reserva"
+    },
+    "15": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Firmware needs to be reloaded on Backup",
+      "pt": "Firmware precisa ser recarregado no Reserva"
+    },
+    "16": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "CEX-Bus com. failure between Primary and Backup",
+      "pt": "Falha de comunicação CEX-Bus entre Primário e Reserva"
+    },
+    "17": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Fatal error on Primary detected",
+      "pt": "Erro fatal detectado no Primário"
+    },
+    "18": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Fatal error on Backup detected",
+      "pt": "Erro fatal detectado no Reserva"
+    },
+    "19": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Bus disturbance detected",
+      "pt": "Distúrbio no barramento detectado"
+    },
+    "22": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Wrong pair of CIs used for redundancy",
+      "pt": "Par de CIs errado para redundância"
+    },
+    "23": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Hardware watchdog on Primary expired",
+      "pt": "Watchdog do Primário expirou"
+    },
+    "24": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Error in PROFIBUS master configuration",
+      "pt": "Erro na config. mestre PROFIBUS"
+    },
+    "25": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "PROFIBUS com. failure between Primary and Backup",
+      "pt": "Falha de comunicação PROFIBUS entre Primário e Reserva"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "High",
+      "desc": "Communication memory obtained too long",
+      "pt": "Memória obtida por tempo muito longo"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Duplicate address",
+      "pt": "Endereço duplicado"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on PROFIBUS line A",
+      "pt": "Sem atividade na linha A do PROFIBUS"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on PROFIBUS line B",
+      "pt": "Sem atividade na linha B do PROFIBUS"
+    },
+    "30": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Hardware failure Primary",
+      "pt": "Falha de hardware no Primário"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Firmware needs to be reloaded",
+      "pt": "Firmware precisa ser recarregado"
+    }
+  },
+  "CI868": {
+    "0": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Timeout on bus (TTO)",
+      "pt": "Time-out no barramento"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Bus synchronization failure (SYN)",
+      "pt": "Falha na sincronização do barramento"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Taken out of ring by another master",
+      "pt": "Removido do anel por outro mestre"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Fatal medium access error",
+      "pt": "Erro fatal de acesso ao meio"
+    },
+    "4": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Fatal hardware error",
+      "pt": "Erro fatal de hardware"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "All slaves failed",
+      "pt": "Todos os escravos falharam"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Hardware config error on backup",
+      "pt": "Erro de config. hardware no Reserva"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Backup device not found",
+      "pt": "Dispositivo de reserva não encontrado"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "I/O config error on backup",
+      "pt": "Erro de config. I/O no Reserva"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "I/O connection error on backup",
+      "pt": "Erro de conexão I/O no Reserva"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Hardware watchdog on Backup expired",
+      "pt": "Watchdog do Reserva expirou"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Error in master config on Backup",
+      "pt": "Erro na config. mestre no Reserva"
+    },
+    "12": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line A of Backup",
+      "pt": "Sem atividade na linha A do Reserva"
+    },
+    "13": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line B of Backup",
+      "pt": "Sem atividade na linha B do Reserva"
+    },
+    "14": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Hardware failure Backup",
+      "pt": "Falha de hardware no Reserva"
+    },
+    "15": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Firmware needs to be reloaded on Backup",
+      "pt": "Firmware precisa ser recarregado no Reserva"
+    },
+    "16": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "CEX-Bus com. failure",
+      "pt": "Falha de comunicação CEX-Bus"
+    },
+    "17": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Fatal error on Primary detected",
+      "pt": "Erro fatal detectado no Primário"
+    },
+    "18": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Fatal error on Backup detected",
+      "pt": "Erro fatal detectado no Reserva"
+    },
+    "19": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Bus disturbance detected",
+      "pt": "Distúrbio no barramento detectado"
+    },
+    "22": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Wrong pair of units used for redundancy",
+      "pt": "Par de unidades errado para redundância"
+    },
+    "23": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Hardware watchdog on Primary expired",
+      "pt": "Watchdog do Primário expirou"
+    },
+    "24": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Error in master configuration",
+      "pt": "Erro na config. mestre"
+    },
+    "25": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Communication failure between Primary and Backup",
+      "pt": "Falha de comunicação entre Primário e Reserva"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "High",
+      "desc": "Communication memory obtained too long",
+      "pt": "Memória obtida por tempo muito longo"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Duplicate address",
+      "pt": "Endereço duplicado"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line A",
+      "pt": "Sem atividade na linha A"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line B",
+      "pt": "Sem atividade na linha B"
+    },
+    "30": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Hardware failure Primary",
+      "pt": "Falha de hardware no Primário"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Firmware needs to be reloaded",
+      "pt": "Firmware precisa ser recarregado"
+    }
+  },
+  "CI873": {
+    "0": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Timeout on bus (TTO)",
+      "pt": "Time-out no barramento"
+    },
+    "1": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Bus synchronization failure (SYN)",
+      "pt": "Falha na sincronização do barramento"
+    },
+    "2": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Taken out of ring by another master",
+      "pt": "Removido do anel por outro mestre"
+    },
+    "3": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Fatal medium access error",
+      "pt": "Erro fatal de acesso ao meio"
+    },
+    "4": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Fatal hardware error",
+      "pt": "Erro fatal de hardware"
+    },
+    "5": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "All slaves failed",
+      "pt": "Todos os escravos falharam"
+    },
+    "6": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Hardware config error on backup",
+      "pt": "Erro de config. hardware no Reserva"
+    },
+    "7": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Backup device not found",
+      "pt": "Dispositivo de reserva não encontrado"
+    },
+    "8": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "I/O config error on backup",
+      "pt": "Erro de config. I/O no Reserva"
+    },
+    "9": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "I/O connection error on backup",
+      "pt": "Erro de conexão I/O no Reserva"
+    },
+    "10": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Hardware watchdog on Backup expired",
+      "pt": "Watchdog do Reserva expirou"
+    },
+    "11": {
+      "status": "Warning",
+      "severity": "Low",
+      "desc": "Error in master config on Backup",
+      "pt": "Erro na config. mestre no Reserva"
+    },
+    "12": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line A of Backup",
+      "pt": "Sem atividade na linha A do Reserva"
+    },
+    "13": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line B of Backup",
+      "pt": "Sem atividade na linha B do Reserva"
+    },
+    "14": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Hardware failure Backup",
+      "pt": "Falha de hardware no Reserva"
+    },
+    "15": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Firmware needs to be reloaded on Backup",
+      "pt": "Firmware precisa ser recarregado no Reserva"
+    },
+    "16": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "CEX-Bus com. failure",
+      "pt": "Falha de comunicação CEX-Bus"
+    },
+    "17": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Fatal error on Primary detected",
+      "pt": "Erro fatal detectado no Primário"
+    },
+    "18": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Fatal error on Backup detected",
+      "pt": "Erro fatal detectado no Reserva"
+    },
+    "19": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Bus disturbance detected",
+      "pt": "Distúrbio no barramento detectado"
+    },
+    "22": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Wrong pair of units used for redundancy",
+      "pt": "Par de unidades errado para redundância"
+    },
+    "23": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Hardware watchdog on Primary expired",
+      "pt": "Watchdog do Primário expirou"
+    },
+    "24": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Error in master configuration",
+      "pt": "Erro na config. mestre"
+    },
+    "25": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Communication failure between Primary and Backup",
+      "pt": "Falha de comunicação entre Primário e Reserva"
+    },
+    "26": {
+      "status": "Warning",
+      "severity": "High",
+      "desc": "Communication memory obtained too long",
+      "pt": "Memória obtida por tempo muito longo"
+    },
+    "27": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "Duplicate address",
+      "pt": "Endereço duplicado"
+    },
+    "28": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line A",
+      "pt": "Sem atividade na linha A"
+    },
+    "29": {
+      "status": "Warning",
+      "severity": "Medium",
+      "desc": "No activity on line B",
+      "pt": "Sem atividade na linha B"
+    },
+    "30": {
+      "status": "Error",
+      "severity": "High",
+      "desc": "Hardware failure Primary",
+      "pt": "Falha de hardware no Primário"
+    },
+    "31": {
+      "status": "Error",
+      "severity": "Medium",
+      "desc": "Firmware needs to be reloaded",
+      "pt": "Firmware precisa ser recarregado"
+    }
+  }
+}
