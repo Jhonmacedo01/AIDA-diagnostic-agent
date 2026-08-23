@@ -209,6 +209,5 @@ Abra um Pull Request.
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 Autor: Jhon Macedo
-E-mail: jhonmacedo01@gmail.com
 LinkedIn: Jhon Macedo
 GitHub: @Jhonmacedo01
